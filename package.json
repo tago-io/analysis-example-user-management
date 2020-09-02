@@ -1,10 +1,10 @@
 {
-  "name": "analysis-example-geofence",
+  "name": "analysis-example-datatransaction",
   "version": "1.0.1",
   "private": true,
-  "description": "Check if location point is inside geofence",
+  "description": "Collect total of data transactions by device and grouped by tag",
   "main": "analysis.js",
-  "repository": "tago-io/analysis-example-geofence",
+  "repository": "tago-io/analysis-example-datatransaction",
   "author": "Tago LLC",
   "license": "MIT",
   "dependencies": {
