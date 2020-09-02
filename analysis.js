@@ -85,7 +85,7 @@ async function myAnalysis(context) {
   await Promise.all(grouped_device_list.map(group => calculateUserTransactions(account, storage, group.value, group.device_list)));
 }
 
-module.exports = new Analysis(myAnalysis, { token: 'f6482b87-0877-4fa3-8f01-ad62b2d9760e' });
+module.exports = new Analysis(myAnalysis);
 
 // To run analysis on your machine (external)
 // module.exports = new Analysis(myAnalysis, { token: "YOUR-TOKEN" });
