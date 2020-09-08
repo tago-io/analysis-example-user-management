@@ -82,7 +82,7 @@ async function myAnalysis(context) {
                               .value();
 
   // Call a new function for each group in assynchronous way.
-  await Promise.all(grouped_device_list.map(group => calculateUserTransactions(account, storage, group.value, group.device_list)));
+  await Promise.all(grouped_device_list.map(group => calculateUserTransactions(account, storage, group.value.replace(/ /g, ''), group.device_list)));
 }
 
 module.exports = new Analysis(myAnalysis);
