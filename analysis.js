@@ -162,7 +162,7 @@ async function init(context, scope) {
   context.log('Script end.');
 }
 
-// module.exports = new Analysis(init);
+module.exports = new Analysis(init);
 
 // To run analysis on your machine (external)
-module.exports = new Analysis(init, { token: "3293db09-5e26-4313-b95a-5cef9a4cc8c8" });
+// module.exports = new Analysis(init, { token: "3293db09-5e26-4313-b95a-5cef9a4cc8c8" });
