@@ -1,14 +1,13 @@
 {
-  "name": "analysis-example-datatransaction",
+  "name": "analysis-example-user-management",
   "version": "1.0.1",
   "private": true,
-  "description": "Collect total of data transactions by device and grouped by tag",
+  "description": "Manage users via dashboard",
   "main": "analysis.js",
-  "repository": "tago-io/analysis-example-datatransaction",
+  "repository": "analysis-example-user-management",
   "author": "Tago LLC",
   "license": "MIT",
   "dependencies": {
-    "@tago-io/sdk": "^10.0.0-beta.23",
-    "axios": "^0.19.2"
+    "@tago-io/sdk": "^10.0.0-beta.23"
   }
 }
