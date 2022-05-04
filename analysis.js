@@ -104,7 +104,7 @@ async function editUser({ account, device, scope }) {
   }
 }
 
-async function deleteUser({ account, device, scope }) {
+async function deleteUser({ account, scope }) {
   const user_id = scope[0].metadata.user_id;
 
   // Search for the user with matching id
@@ -134,9 +134,9 @@ async function init(context, scope) {
   // Instance the Account class
   const account = new Account({ token: environment_variables.account_token });
 
-  // Instance the device class using the origin from scope variables.
-  // Origin is always the device used in the widget to trigger the analysis.
-  const device_id = scope[0].origin;
+  // Instance the device class using the device from scope variables.
+  // Device is always the device used in the widget to trigger the analysis.
+  const device_id = scope[0].device;
   const device_token = await Utils.getTokenByName(account, device_id);
   const device = new Device({ token: device_token });
 
@@ -147,7 +147,7 @@ async function init(context, scope) {
     if (environment_variables._widget_exec === 'edit') {
       await editUser({ account, device, scope });
     } else if (environment_variables._widget_exec === 'delete') {
-      await deleteUser({ account, device, scope });
+      await deleteUser({ account, scope });
     } else if (environment_variables._widget_exec === 'insert') {
       await createUser({ account, environment_variables, device, device_id, scope });
     }
